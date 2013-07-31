@@ -35,8 +35,9 @@ function getEC(aN) {
         }
         aN -= cSubshell.maxE;
         cSubshell.advance();
-        if (aN > 0)
-            out += ',';
+        if (aN > 0) {
+            out += ', ';
+        }
     }
     return out;
 }
