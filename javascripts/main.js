@@ -1,4 +1,3 @@
-console.log('This would be the main JS file.');
 var Subshell, ssn;
 
 ssn = "spdfghijklmnoqrtuvwxyz";
@@ -45,6 +44,10 @@ function getEC(aN) {
 window.addEventListener("DOMContentLoaded", function() {
     document.querySelector("#action").addEventListener("click", function() {
         var aN = parseInt(document.querySelector("#atomicn").value, 10);
+        if (isNaN(aN)) {
+            document.querySelector("#result").innerHTML = 'Do you even know what atomic number means?';
+            return;
+        }
         document.querySelector("#result").innerHTML = getEC(aN);
     }, false);
 }, false);
